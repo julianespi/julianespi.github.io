@@ -1,0 +1,201 @@
+#pageTitle{
+    color: red;
+    text-align: center;
+    background-color: black;
+    font-family: Impact, fantasy;
+
+}
+
+/* all for nav bar*/
+ul.navBar{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    overflow: hidden;
+}
+
+li.navBar{
+    float: left;
+    border-right: 1px solid gray;
+}
+
+li.navBar:last-child{
+    border-right: none;
+}
+
+li.navBar a{
+    display: block;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    padding: 15px
+}
+
+div.header{
+    background: black;
+    width: 100%;
+    height: 50px;
+    position: absolute;
+    top: 0;
+    position: sticky;
+}
+/* all for nav bar*/
+
+
+/* home page */
+
+@media only screen and (min-width: 400){
+    #homePage{
+        background-image: url("photos/talltree.jpg");
+        background-size: cover;
+        }
+}
+
+@media only screen and (min-width: 641px){
+    #homePage{
+        background-image: url("photos/mountain.jpg");
+        background-size: cover;
+        }
+}
+
+@media only screen and (min-width: 1000px){
+    #homePage{
+        background-image: url("photos/clear-sky-clouds.jpg");
+        background-size: cover;
+    
+    }
+}
+
+h2{
+    color: rgb(240, 207, 40);
+    text-align: center;
+    text-decoration: underline;
+    text-decoration-style: double;
+    text-decoration-thickness: 2px;
+}
+
+#homeLink{
+    color: black;
+    text-align: center;
+    text-decoration: none;
+    border: 2px solid red;
+    border-radius: 12px;
+    padding: 5px;
+}
+
+.navBarDescription{
+    text-align: center;
+}
+
+#navBar{
+    width:33.33%;
+    text-align: center;
+}
+
+@keyframes photoIntro {
+    from{transform: rotate(0deg);}
+    to{transform: rotate(360deg);}
+    
+}
+
+.familyPhoto{
+    display: block;
+    margin-left: auto;
+    animation-name: photoIntro;
+    animation-duration: 2s;
+}
+
+p{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: medium;
+}
+
+
+
+table,tr,td{
+    border-top: double;
+    border-left: double;
+    border-right: double;
+    border-bottom: double;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    border-color: skyblue;
+    border-radius: 12px;
+    padding: 5px;
+}
+
+img{
+    height :200px ;
+} 
+
+
+
+/* 3dPrinters */
+
+
+.container{
+    display: flex;
+    background: dodgerblue;
+    justify-content:center;
+}
+
+.container div{
+    
+    width: 200px;
+    margin: 10px;
+    text-align: center;
+    height: 220px;
+    font-size: 20px;
+}
+
+@keyframes printerLeftIntro {
+    0%{
+        transform: skew(60deg) translateX(750px);
+    }
+    100%{
+        transform: skew(0deg);
+    }
+    
+}
+
+div.container div.PrinterLeft{
+    animation-name: printerLeftIntro;
+    animation-duration: 2s;
+    animation-delay: 1s;
+}
+
+@keyframes printerRightIntro {
+    0%{
+        transform: skew(60deg) translateX(-750px);
+    }
+    100%{
+        transform: skew(0deg);
+    }
+    
+}
+
+div.container div.PrinterRight{
+    animation-name: printerRightIntro;
+    animation-duration: 2s;
+    animation-delay: 1s;
+}
+
+.name{
+    text-decoration: none;
+    text-transform: uppercase;
+    text-shadow:2px 2px 5px black ;
+    font-style: oblique;
+    font-size: 30px;
+}
+
+.printerPhoto{
+    border-radius: 50%;
+}
+
+ 
+
+.printingPage{
+    background-color: rgb(247, 130, 20);
+}

@@ -1,20 +1,35 @@
 <!DOCTYPE html>
-<html>
-    <title> I'm Julian Espinoza</title>
+<html id="homePage">
+    <head>
+        <title> I'm Julian Espinoza</title>
+        <link rel ="stylesheet" href="styles.css">
+    </head>
+    
     <body>
+        <div class = "header">
+        <ul class = "navBar">
+            <li class = "navBar"> <a href="index.html"  >Home</a></li>
+            <li class = "navBar"> <a href="videogames.html" >  Video games </a></li>
+            <li class = "navBar"> <a href="3dPrinting.html" > 3d printing </a></li>
+            <li class = "navBar"> <a href = "Anime.html" >Anime</a> </li>
+        </ul>
+        </div>
     <table>
         <tr>
-            <td colspan = "2">
-                <h1 > Hello Im Julian Espinoza. </h1>
+            <td colspan = "3">
+               <p><h1 id = "pageTitle"> Hello Im Julian Espinoza. </h1></p>
             </td> 
-            <td>
-                <img src="me.jpg" width = "400" alt = "pciture of me and my family">
-            </td>
+
         </tr>
         <tr>
-            <td colspan = "2"> 
-                <h2> A little about my self</h2>
-                <p>I come from a family of 5, Im the youngest of 3.
+            <td>
+                <div class = "familyPhoto">   
+                    <img src="photos/me.jpg"  alt = "pciture of me and my family" class = "familyPhoto">
+                </div>
+            </td>
+            <td class = "aboutMe"> 
+                <h2 id => A little about my self</h2>
+                <p>I am the person on the right (not the statue). I come from a family of 5, Im the youngest of 3.
                     one older brother and one older sister. I went to highschool
                     at Segerstrom highschool. Graduated in 2020 and went 
                     to Santa Ana College for my GE's and than transferd
@@ -22,23 +37,9 @@
                 </p>
             </td>
             <td>
-                <img src = "family.jpg" width = "400" alt = "Picture of my family">
-            </td>
-        </tr>
-        <tr>
-            <td colspan = "3"> 
-                <h3> Down below are some of my hobbies and click on them to find more out</h3>
-            </td>
-        </tr>
-        <tr>
-            <td > 
-              <a href="videogames.html"> <h1> Video games </h1></a>  
-            </td>
-            <td > 
-               <a href="3dPrinting.html"><h1> 3d printing </h1></a>
-            </td>
-            <td > 
-               <a href = "Anime.html"><h1> Anime </h1></a> 
+                <div class = "familyPhoto">
+                <img src = "photos/family.jpg"  alt = "Picture of my family" class = familyPhoto>
+                </div>
             </td>
         </tr>
     </table>

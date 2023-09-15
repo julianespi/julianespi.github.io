@@ -1,37 +1,58 @@
 <!DOCTYPE html>
-<html>
-    <title>3D printing</title>
-    <body>
-        
-        <h1> <i>3D printing</i> </h1>
+<html >
+    <Head>
+        <title>3D printing</title>
+        <link rel ="stylesheet" href="styles.css">
+    </Head>
+    
+    <body class = "printingPage">
+        <div class = "header">
+            <ul class = "navBar">
+                <li class = "navBar" > <a href="index.html" >Home</a></li>
+                <li class = "navBar" > <a href="videogames.html">  Video games </a></li>
+                <li class = "navBar" > <a href="3dPrinting.html"> 3d printing </a></li>
+                <li class = "navBar" > <a href = "Anime.html" >Anime</a> </li>
+            </ul>
+        </div>
+        <h1 id = "pageTitle"> 3D printing </h1>
         <hr>
-        <p>I picked up 3D printing when I was in highschool when I entered a robitic class and then got back into it about a year and a half ago have been practiceing ever since</p>
-        <p>I use the follwing 3D printer to make anything from little desk orginizers to full blown helmets.</p>
+
+        <div>
+            <p> I got introduced to 3D printing when I was in highschool. I enrolled in an engineering class and they taught us how to 3D model 
+                and print. Since than I have bought two of my own 3D printers to create a varity of things. It ranges from little desk orginazers to
+                full helmets</p>
+        </div>
 
         <h2> My 3D printers</h2>
-        <ul> 
-            <li> <a href = "https://www.creality.com/products/ender-5-pro-3d-printer" >Ender 5</a></li>
-        </ul>
-        <img src ="ender5.jpg" alt = " a pcitrue of an ender 5 3D printer">
-        <ul>
-            <li><a href = "https://store.creality.com/products/ender-5-plus-3d-printer?spm=..collection_90778a1d-d845-4ff0-a8c4-48fded4b7d74.albums_2.1" >Ender 5 plus</a></li>    
-        </ul>
-        <img src ="ender5plus.jpg" alt = "a pcitrue of an ender 5 plus printer">
-        <h4>Some of my favorite 3D prints Ranked</h4>
-        <h5>I call this Ultra Swole Capybara</h5>
-        <ol> 
-            <li><img src ="fav3DPrint.jpg" width = "400" alt = " an Ultra Swole Capybara"></li>
-        </ol>
-        <h5>This is a phase 1 clone tropper helmet</h5>
-        <ol>
-            <li><img src ="helm.jpg" width = "400" alt = "a clone tropper phase 1 helmet"></li>
-        </ol>    
-        <h5>This is a tank Capybara</h5>
-        <ol> 
-            <li><img src ="tank.jpg" width = "400" alt = " a Capybara with tank attachment"></li>    
-        </ol>
-            
 
-        <a href = "index.html">go back</a>
+        <div class = container>
+            <div class = PrinterLeft>
+                <img src ="photos/ender5.jpg" alt = " a pcitrue of an ender 5 3D printer" class = "printerPhoto">
+                <a href = "https://www.creality.com/products/ender-5-pro-3d-printer"  class = "name">Ender 5</a>
+            </div>
+            <div class = PrinterRight>
+                <img src ="photos/ender5plus.jpg" alt = "a pcitrue of an ender 5 plus printer" class = "printerPhoto">
+                <a href = "https://store.creality.com/products/ender-5-plus-3d-printer?spm=..collection_90778a1d-d845-4ff0-a8c4-48fded4b7d74.albums_2.1" class = "name">Ender 5 plus</a>  
+            </div>
+        </div>
+
+
+        <div class = container>
+            <div class = printInfo>I call this Ultra Swole Capybara</div>
+            <div class = prints><img src ="photos/fav3DPrint.jpg"  alt = " an Ultra Swole Capybara"></div>
+            <div><p> Here are some of my favorite 3D prints that i have done for friends and my self. which ever side they are on is the printer i used to print it</p></div>
+            <div class = prints><img src ="photos/helm.jpg" alt = "a clone tropper phase 1 helmet"></div>
+            <div class="printInfo">This is a phase 1 clone tropper helmet that i had made for a friend</div>
+        </div>
+
+        <div class = container>
+            <div class = printInfo>This was a hand made gift I made for my girlfriend</div>
+            <div class = prints><img src ="photos/mylahGift.jpg"  alt = "a 3dPrinted lantern with custom frames"></div>
+            <div></div>
+            <div class = prints><img src ="photos/tank.jpg" alt = "a Capybara with tank attachment"></div>
+            <div class="printInfo">This is a tank Capybara</div>
+        </div>
+
+
     </body>
 </html>
