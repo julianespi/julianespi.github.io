@@ -29,7 +29,8 @@ li.navBar a{
     color: white;
     text-align: center;
     text-decoration: none;
-    padding: 15px
+    padding: 15px;
+    font-weight:bold;
 }
 
 div.header{
@@ -47,8 +48,10 @@ div.header{
 
 @media only screen and (min-width: 400){
     #homePage{
-        background-image: url("photos/talltree.jpg");
+        background: light;
         background-size: cover;
+        background-repeat: no-repeat;
+
         }
 }
 
@@ -56,6 +59,7 @@ div.header{
     #homePage{
         background-image: url("photos/mountain.jpg");
         background-size: cover;
+        background-repeat: repeat;
         }
 }
 
@@ -63,6 +67,7 @@ div.header{
     #homePage{
         background-image: url("photos/clear-sky-clouds.jpg");
         background-size: cover;
+        background-repeat: repeat;
     
     }
 }
@@ -94,8 +99,8 @@ h2{
 }
 
 @keyframes photoIntro {
-    from{transform: rotate(0deg);}
-    to{transform: rotate(360deg);}
+    from{ transform: rotate(0deg);}
+    to{ transform: rotate(360deg);}
     
 }
 
@@ -104,9 +109,12 @@ h2{
     margin-left: auto;
     animation-name: photoIntro;
     animation-duration: 2s;
+    animation-iteration-count: 2;
+    animation-direction: reverse;
 }
 
 p{
+    color: brown;
     font-family: 'Times New Roman', Times, serif;
     font-size: medium;
 }
@@ -134,12 +142,31 @@ img{
 
 /* 3dPrinters */
 
+.printingPage{
+    background-image: linear-gradient(red, yellow);
+    
+}
 
 .container{
     display: flex;
-    background: dodgerblue;
-    justify-content:center;
+    justify-content: center;
 }
+
+.printContainer{
+    padding-left: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 10px;
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+@media only screen and (max-width: 1000px) {
+    div.printContainer{
+        flex-direction: column;
+     }
+  }
 
 .container div{
     
@@ -194,8 +221,54 @@ div.container div.PrinterRight{
     border-radius: 50%;
 }
 
- 
+ /*anime page  */
+body.animePage{
+    background-image: url(photos/bonsiaTree.jpg);
 
-.printingPage{
-    background-color: rgb(247, 130, 20);
 }
+
+ div.animeIntro{
+    height: 200px;
+    width: 200px;
+    background-color: yellow;
+    box-shadow: 10px 10px orange;
+ }
+
+ div.animeIntro p{
+    color: blue;
+ }
+ 
+ /* add a card */
+
+
+ div.animeContainer{
+    display: flex;
+    flex-direction: column;
+
+ }
+
+ @media only screen and (min-width: 1000px) {
+    div.animeContainer{
+        flex-direction: row;
+     }
+  }
+
+div.animePhotoDiv{
+    background: gray;
+    width: 200px;
+    height: 200px;
+    margin-top: 10px;
+    margin-bottom: 12px;
+    margin-left: 10px;
+    margin-right: 10px;
+    text-align: center;
+}
+
+div.animePhotoDiv p{
+text-indent: 1%;
+color: black;
+background-color: lightcoral;
+margin-top:0px;
+}
+
+
