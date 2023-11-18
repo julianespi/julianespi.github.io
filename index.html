@@ -1,0 +1,49 @@
+---
+layout: base
+title: Home
+
+---
+<head>
+  <a href = "#aboutUs">about us</a>
+  <header>
+    
+    <h1>{{ title }}</h1>
+    <h2>This is a collection of photos that include people 
+      writing in various hand books and notepads</h2>
+  </header>
+
+</head>
+
+<section >
+{% for photo in photos7kmsoc3.media -%}
+<div>
+  
+  <a href = "/photos7kmsoc3/{{photo.id}}/photo.html" >
+    <img src = "{{photo.src.tiny}}" alt = "{{photo.alt}}">
+  </a>
+</div>
+{% endfor -%}
+</section>
+<footer>
+  <hr />
+  <p>
+    <small>
+      <a href="https://www.pexels.com" target="_blank"
+        >Photos provided by Pexels</a
+      >
+    </small>
+  </p>
+  <div id="aboutUs">
+    <h3>About Us</h3>
+  <img src="groupPhoto.jpg" alt="The three group memebrs that worked on the group" style: width="300px">
+  <p>On the left three is Julian Espinoza. He worked on getting the skelton of 
+    the site generation and getting the hyperlinks working so that clicking on 
+    an image took you to a more detail page about said image. in the middle there
+     is Karen Resoles she was incharge of populating the generated websited with
+      he info from the pexils API and formating it with the MVP.css stylesheet 
+      then on the right there is Alan Codling </p>
+  <a href="https://github.com/Alan-C03?tab=repositories">Alan Codling Repo</a> <br>
+  <a href="https://github.com/julianespi?tab=repositories"> Julian Espinoza Repo</a><br>
+  <a href="https://github.com/karenerosales?tab=repositories">Karen Resales Repo</a><br>
+  </div>
+</footer>

@@ -1,0 +1,28 @@
+---
+pagination:
+    data: photos7kmsoc3.media 
+    size: 1
+    alias: photo
+permalink: photos7kmsoc3/{{pagination.items[0].id}}/photo.html
+---
+<a href="/index.html"> home </a>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ photo.photographer }}</title>
+    <style>
+        body {
+            color: "{{ photo.avg_color }}";
+        }
+    </style>
+</head>
+<body style= "background-color: {{ photo.avg_color }}";>
+    <h1>Photographer: {{ photo.photographer }}</h1> 
+    <img src="{{photo.src.large}}" alt="{{photo.alt}}">
+    <p>Caption: {{ photo.alt }}</p>
+    <p>Other works of Photographer: <a href="{{photo.photographer_url }}">here</a> </p>
+    <p>More about the photo: <a href="{{photo.url }}">here</a></p>
+
+</body>
+</html>
