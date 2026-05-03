@@ -1,4 +1,4 @@
-<html>
+<html class="scroll-smooth">
   <head>
      <title>
         Julian Portfolio
@@ -6,13 +6,85 @@
      <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
   </head>
   <body>
-      <div class =''>
-        <p>NAV BAR</p>
+
+
+    <nav class="bg-blue-300 shadow-md fixed top-0 w-full z-50">
+      <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+        
+        <!-- Logo -->
+        <h1 class="text-xl font-bold text-white">
+          Julian Espinoza
+        </h1>
+
+        <!-- Desktop Menu -->
+        <ul class="hidden md:flex space-x-8 text-white font-medium">
+          <li><a href="#me" class="hover:text-sky-100 transition">Me</a></li>
+          <li><a href="#projects" class="hover:text-sky-100 transition">Projects</a></li>
+          <li><a href="#skills" class="hover:text-sky-100 transition">Skills</a></li>
+          <li><a href="#contact" class="hover:text-sky-100 transition">Contact</a></li>
+        </ul>
+
+        <!-- Hamburger Button -->
+        <button id="menu-btn" class="md:hidden text-white focus:outline-none">
+          ☰
+        </button>
       </div>
-      <div class = "flex items-center justify-center h-full bg-gray-300 p-4">
-        <div class = 'bg-gray-400 p-4'>
-          <img class = 'h-80 rounded-full' src="Photos/20251105_103639.jpg" alt="image of Julian Espinoza ">
-        </div> 
+
+      <!-- Mobile Menu -->
+      <div id="mobile-menu" class="hidden md:hidden px-6 pb-4">
+        <ul class="flex flex-col space-y-4 text-white font-medium">
+          <li><a href="#me" class="hover:text-sky-100 transition">Me</a></li>
+          <li><a href="#projects" class="hover:text-sky-100 transition">Projects</a></li>
+          <li><a href="#skills" class="hover:text-sky-100 transition">Skills</a></li>
+          <li><a href="#contact" class="block hover:text-sky-100">Contact</a></li>
+        </ul>
       </div>
+    </nav>
+
+    <section id="me" class="h-screen flex items-center justify-center bg-gray-100">
+      <h1 class="text-4xl mb-6">Me Section</h1>
+
+      <div class="bg-gray-400 p-4 rounded-full">
+        <img class="h-80 w-80 object-cover rounded-full" 
+            src="Photos/20251105_103639.jpg" 
+            alt="image of Julian Espinoza">
+      </div>
+    </section>
+
+    <section id="projects" class="h-screen flex items-center justify-center bg-gray-200">
+      <h1 class="text-4xl">Projects</h1>
+    </section>
+
+    <section id="skills" class="h-screen flex items-center justify-center bg-gray-300">
+      <h1 class="text-4xl">Skills</h1>
+    </section>
+
+    <section id="contact" class="h-screen flex items-center justify-center bg-gray-400">
+      <h1 class="text-4xl">Contact</h1>
+    </section>
+
+
+    <script>
+    const btn = document.getElementById('menu-btn');
+    const menu = document.getElementById('mobile-menu');
+
+    btn.addEventListener('click', () => {
+      menu.classList.toggle('hidden');
+    });
+    
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      e.preventDefault();
+
+      const target = document.querySelector(this.getAttribute('href'));
+      target.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+      });
+    });
+  });
+    </script>
   </body>
+
+
 </html>
